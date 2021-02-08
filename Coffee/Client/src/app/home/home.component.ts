@@ -65,6 +65,13 @@ export class HomeComponent implements OnInit {
                     o.quantity++;
                     o.cost += parseFloat(d.cost);
                 });
+                if ( o.status === 'Arrived'){
+                    o.waitTime = 0;
+                    o.interval =  setInterval(
+                        function(){ o.waitTime += 10; }, 
+                        10000
+                    );
+                }
             });
         }, error => {
             console.log(error);

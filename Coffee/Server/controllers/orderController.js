@@ -16,7 +16,7 @@ let ORDERS = [
       details: [
           {name: 'Short Black', cost: '5.5', size: 'Small', note: '1 sugar'},
   ]},
-  {id: 3, orderNo: '43345', orderDate: '2021-02-07 09:25:30', name: 'Tim', payment: 'Paid', status:'Preparing',
+  {id: 3, orderNo: '43345', orderDate: '2021-02-07 09:25:30', payment: 'Paid', status:'Preparing',
       customer: {
           firstName: 'Tim',
           lastName: 'Burton'
@@ -24,7 +24,7 @@ let ORDERS = [
       details: [
           {name: 'Vocalno', cost: '7.5', size: 'Large', note: 'with cream'}
   ]},
-  {id: 4, orderNo: '54645', orderDate: '2021-02-07 09:45:30', name: 'Cherry', payment: '', status:'Arrived',
+  {id: 4, orderNo: '54645', orderDate: '2021-02-07 09:45:30', payment: '', status:'Arrived',
       customer: {
           firstName: 'Cherry',
           lastName: 'Black'
@@ -32,6 +32,15 @@ let ORDERS = [
       details: [
           {name: 'Americano', cost: '5.0', size: 'Regular', note: '1 sugar, white'},
           {name: 'Ice Mocha', cost: '6.5', size: 'Large', note: 'No sugar'},
+  ]},
+  {id: 5, orderNo: '57789', orderDate: '2021-02-07 11:45:30',  payment: '', status:'Order',
+      customer: {
+          firstName: 'Michael',
+          lastName: 'Wong'
+      },
+      details: [
+          {name: 'Iced Coffee', cost: '8.0', size: 'Large', note: '2 sugars'},
+          {name: 'Ice Mocha', cost: '6.5', size: 'Large', note: 'No sugar, extra chocolate, cream on top'},
   ]},
 ];
 (function(controller){
