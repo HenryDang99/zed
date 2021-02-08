@@ -1,0 +1,26 @@
+.header{
+    height: 100px;
+    padding: 16px;
+    background-color: #1c7fbe;
+    background-image: -webkit-linear-gradient(left, #43a6e1 3.2%, #0063a5 57.52%, #0063a5 58.2%);
+    background-image: -moz-linear-gradient(left, #43a6e1 3.2%, #0063a5 57.52%, #0063a5 58.2%);
+    background-image: -o-linear-gradient(left, #43a6e1 3.2%, #0063a5 57.52%, #0063a5 58.2%);
+    background-image: -webkit-linear-gradient(left, #43a6e1 3.2%, #0063a5 57.52%, #0063a5 58.2%);
+    background-image: linear-gradient(left, #43a6e1 3.2%, #0063a5 57.52%, #0063a5 58.2%);
+}
+.toolbar{
+    float: right;
+}
+.toolbar {
+    display: flex;
+}
+.toolbar > button {
+    margin-right: 10px;
+    
+}
+.toolbar > div {
+    margin-left: 10px;
+}
+img:hover {
+    cursor: pointer;
+}

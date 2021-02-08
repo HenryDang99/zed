@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f1ede4;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    background-color: darkmagenta !important;
+    color: #ffffff;
+}
+.p-datatable .p-datatable-thead span.pi {
+    color: #ffffff;
+}
+.p-column-filter-menu-button:hover > .p-datatable .p-datatable-thead span.pi{
+    color: #000000;
+}
+.p-datatable .p-datatable-thead span.pi:hover,
+.p-datatable .p-datatable-thead span.pi:focus {
+    color: #000000;
+}
+
+.p-column-filter-menu-button:hover > span.pi,
+.p-column-filter-menu-button-active > span.pi {
+    color: darkmagenta !important;
+}
+.p-datatable .p-datatable-tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.p-sidebar .p-sidebar-close{
+    top: -20px;
+}
+
+
+.error {
+    font-style: italic;
+    color: red;
+}
+.page-container {
+    padding: 16px;
+}
+.card-3d{
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 2px 2px #00d2c6, 
+            -3px -3px 6px #00ffff;
+}
+.card-3d label {
+    font-weight: 500;
+}
+
+.table .thead-light th {
+    color: #ffffff;
+    background-color: #1c7fbe;
+    border-color: #4495e6;
+}
+th {
+    font-weight: 500 !important;
+}

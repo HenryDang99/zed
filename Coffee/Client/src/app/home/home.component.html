@@ -1,0 +1,57 @@
+<div class="page-container">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th *ngFor="let col of columns">
+                    <div>
+                        {{col.header}} 
+                    </div>
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let order of orders">
+            <tr class="order" (click)="toggleDetail(order)" *ngIf="order.status !== 'Deliver'">
+                <td>{{order.orderNo}}</td>
+                <td>{{order.orderDate | date: 'HH:mm' }}</td>
+                <td>{{waitTime(order) | date: 'HH:mm:ss'}}</td>
+                <td>{{order.customer.firstName}} {{order.customer.lastName}}</td>
+                <td>{{order.quantity}}</td>
+                <td>${{order.cost}}</td>
+                <td>{{order.payment}}</td>
+                <td>{{order.status}}</td>
+                <td>
+                    <button class="btn btn-info" 
+                        *ngIf="enableAction(order, 'Order')"
+                        (click)="onChangeStatus(order, 'Arrived')"
+                        style="margin-right: 5px;">Arrive</button>
+                    <button class="btn btn-info" 
+                        *ngIf="enableAction(order, 'Arrived')"
+                        (click)="onChangeStatus(order, 'Preparing')"
+                        style="margin-right: 5px;">Prepare</button>
+                    <button class="btn btn-info" 
+                        *ngIf="enableAction(order, 'Preparing')"
+                        (click)="onChangeStatus(order, 'Ready')"
+                        style="margin-right: 5px;">Ready</button>
+                    <button class="btn btn-info" 
+                        *ngIf="enableAction(order, 'Ready')"
+                        (click)="onChangeStatus(order, 'Deliver')"
+                        style="margin-right: 5px;">Deliver</button>
+                </td>
+            </tr>
+            <tr *ngIf="order.showDetail && order.status !== 'Deliver'">
+                <td colspan="9">
+                    <div class="flex-container" *ngFor="let detail of order.details">
+                        <div class="flex-component">
+                            <h5>{{detail?.name}} - {{detail?.size}}</h5>
+                            <div class="note">{{detail?.note}}</div>
+                        </div>
+                        <div class="flex-component">
+                            <h5>${{detail?.cost}}</h5>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

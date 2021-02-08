@@ -1,0 +1,16 @@
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    padding-left: 10%;
+}
+.flex-component {
+    margin-right: 50px;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.note {
+    font-style: italic;
+}
+.order {
+    background-color: lightgrey;
+}
